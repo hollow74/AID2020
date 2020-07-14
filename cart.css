@@ -1,0 +1,216 @@
+/*1.导航栏*/
+#nav{
+    margin-top:50px;
+}
+/*1.1三列布局（搜索栏导航）*/
+/*左列logo*/
+.nav_top{
+    overflow:hidden;/*浮动元素保留高度*/
+    margin-bottom:20px;
+}
+.nav_top>img{
+    float:left;
+    width:168px;
+    border-radius:10px;
+}
+/*中间搜索栏*/
+.search{
+    float:left;
+    margin-left:113px;
+    position:relative;/*父元素相对定位，子元素img绝对定位*/
+}
+.search input{
+    width:380px;
+    height:36px;
+    border:1px solid #999;
+    border-radius:18px;
+    padding:0;/*去掉默认内边距*/
+    padding-left:10px;
+    padding-right:40px;
+    color:#999;/*灰色*/
+}
+.search img{
+    width:36px;
+    height:36px;
+    position:absolute;/*设置定位的元素可以用偏移属性调位置*/
+    right:0;
+    top:1px;
+    border-radius:50%;
+}
+/*右列导航*/
+.nav_top>ul{
+    float:right;
+    margin-top:9px;/*（中间搜索栏38-右列导航20）的一半*/
+}
+.nav_top>ul>li{
+    float:left;
+}
+.nav_top>ul>li b{
+    margin:0 10px;
+}
+.nav_top>ul>li img{
+    vertical-align:top;/*图片与文本元素的对齐方式*/
+}
+/*1.2文字导航*/
+.nav_bottom a{
+    font-size:16px;
+    margin-right:30px;
+}
+/*2.购物车主体*/
+#main{
+    position:relative;
+    margin-top:50px;
+    padding-bottom:50px;
+}
+/*2.1购物车标题*/
+#main>h2{
+    color:#333;/*偏灰的黑色*/
+}
+#main>h2>p{
+    float:right;
+    font-size:12px;
+    color:#9a9a9a;/*灰色*/
+    font-weight:400;/*文本粗细(不加单位)（去掉了默认h2加粗效果）*/
+}
+#main>h2>p>span{
+    margin-left:30px;
+}
+.total_count,.total_price{
+    color:#997697;
+    font-size:14px;
+}
+/*2.2工具栏*/
+#main .toolbar{
+    height:35px;
+    line-height:35px;/*保证一行文本垂直居中*/
+    background:#e6e6e5;/*灰色*/
+    border-top:1px solid gray;
+    text-align:center;/*文本水平居中*/
+    box-shadow:0 2px 3px gray;
+    margin-top:5px;
+    margin-bottom:15px;
+    color:#808080;/*80灰*/
+}
+.toolbar img,.content>.item>.check>img,.bottom_bar img{
+    width:10px;
+    height:10px;
+}
+.toolbar div{
+    float:left;
+}
+/*设置每一栏的宽度*/
+.check{
+    width:62px;
+}
+.info{
+    width:380px;
+}
+.price{
+    width:152px;
+}
+.count{
+    width:150px;
+}
+.sum{
+    width:130px;
+}
+.action{
+    width:126px;
+    /*修改鼠标形状：default(箭头) pointer(手指)*/
+    cursor:default;
+}
+/*2.3 商品记录展示*/
+.content{
+    /*设置最小高度*/
+    min-height:300px;
+}
+.item{
+    height:115px;
+    text-align:center;/*文本水平居中*/
+    background:#fff;/*白*/
+    border-top:1px solid gray;
+    border-bottom:1px solid gray;
+    margin-bottom:10px;
+}
+.item div{
+    float:left;
+    height:115px;
+    box-sizing:border-box;
+    text-align:center;
+}
+.item .info,.item .price,.item .count,.item .sum{
+    border-right:1px solid gray;
+}
+/*商品栏设置*/
+.item .check{
+    line-height:115px;
+}
+.item .info img{
+    width:84px;
+    height:84px;
+    float:left;
+    margin-right:20px;/*不能用line-height调*/
+    margin-top:15px;
+}
+.item .info p{
+    text-align:left;
+}
+.item .info p:nth-child(2){/*作为第二个子元素存在的p标签*/
+    margin:18px 0 10px 0;
+}
+.item .price h3{
+    color:#997679;
+    margin-top:40px;
+}
+.item .count a{
+    float:left;
+    width:26px;/*a标签是行内块元素，不能手动调宽高*/
+    height:26px;
+    text-align:center;
+    line-height:26px;
+    border:1px solid gray;
+    background:#e8e8e8;/*灰*/
+    color:#333;
+    margin-top:43px;
+}
+.item .count input{
+    float:left;
+    width:26px;
+    height:26px;
+    border:1px solid gray;
+    border-left:none;
+    border-right:0;
+    padding:0;
+    text-align:center;
+    margin-top:43px;
+}
+a.minus{/*类名为minus的a标签*/
+    margin-left:34px;
+}
+.item .sum,.item .action{
+    line-height:115px;/*调垂直居中*/
+}
+/*2.4底部工具栏*/
+.bottom_bar{
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+    height:30px;
+    background:#e6e6e5;
+    line-height:30px;/*文本垂直居中*/
+}
+.bottom_bar>div{
+    float:right;
+}
+.bottom_bar button{
+    width:120px;
+    height:30px;
+    border:none;/*按钮默认带边框，去掉*/
+    background:#997679;
+    color:#fff;/*白*/
+    font-size:16px;
+}
+
+
+
